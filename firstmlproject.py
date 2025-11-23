@@ -41,3 +41,13 @@ print("RMSE:",rmse)
 hours=[[5]]
 prediction=model.predict(hours)
 print(f"Predicted score for studying 5 hours:{prediction[0]}")
+
+import matplotlib.pyplot as plt
+
+plt.scatter(x, y, color="blue")
+plt.plot(x, model.predict(x), color="red")
+plt.title("Hours vs Scores")
+plt.xlabel("Hours Studied")
+plt.ylabel("Scores")
+plt.show()
+
